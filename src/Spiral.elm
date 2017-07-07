@@ -15,10 +15,6 @@ main =
         }
 
 
-
--- MODEL
-
-
 type alias Model =
     { levels : Int
     }
@@ -56,7 +52,7 @@ type alias Point =
 
 constrainTheta : Float -> Float
 constrainTheta theta =
-    theta - toFloat (floor (theta / 2 * pi))
+    theta - 2 * pi * toFloat (floor (theta / (2 * pi)))
 
 
 spiral : Int -> List Point
